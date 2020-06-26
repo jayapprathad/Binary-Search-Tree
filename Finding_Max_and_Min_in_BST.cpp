@@ -33,13 +33,13 @@ int main()
 node* insert(node* root, int val) // Function to insert a value into the tree
 {
 	if(root == NULL) // Inserting in the correct position
-        return allocate_node(val);
-    else if(root->data > val)  // Going through Left side of the tree
-        root->left = insert(root->left, val);
-    else if(root->data < val)  // Going through right side of the tree
-        root->right = insert(root->right, val);
-    else  
-        printf("\nRepeated Value");
+            return allocate_node(val);
+        else if(root->data > val)  // Going through Left side of the tree
+            root->left = insert(root->left, val);
+        else if(root->data < val)  // Going through right side of the tree
+            root->right = insert(root->right, val);
+        else  
+            printf("\nRepeated Value");
 }
 
 node* allocate_node(int val)  // Function to allocate a new node with the respective data
@@ -54,12 +54,12 @@ int maximum(node *root)  // Finding Maximum value of the tree
 {
 	while(root->right != NULL)
 	    root = root->right;
-    return root->data;
+        return root->data;
 }
 
 int minimum(node *root)  // Finding Minimum value of the tree
 {
 	while(root->left != NULL)
 	    root = root->left;
-    return root->data;
+        return root->data;
 }
