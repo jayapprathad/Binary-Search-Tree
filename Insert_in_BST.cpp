@@ -45,6 +45,7 @@ node* insert(node* root, int val) // Function to insert a value into the tree
             root->right = insert(root->right, val);
         else  
             printf("\nRepeated Value");
+	return root;
 }
 
 node* allocate_node(int val)  // Function to allocate a new node with the respective data
